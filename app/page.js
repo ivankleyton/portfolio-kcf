@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Technologies from "./components/Technologies";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -74,6 +75,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Technologies />
       </main>
     </div>
   );
