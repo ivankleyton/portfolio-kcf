@@ -1,30 +1,86 @@
 .header {
-  height: 72px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 86px;
+  margin: 0 auto;
+  padding: 0 32px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dddddd;
 }
 
 .logo {
-  color: #1a1a1a;
-  font-size: 24px;
+  color: #2fa75b;
+  font-size: 30px;
   font-weight: 700;
+  letter-spacing: -2px;
   text-decoration: none;
+}
+
+.logo span {
+  color: #f47b32;
 }
 
 .navigation {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 28px;
 }
 
 .navigation a {
-  color: #555555;
+  position: relative;
+  padding: 32px 0;
+
+  color: #171717;
+  font-size: 15px;
   text-decoration: none;
+
+  transition: color 0.2s;
 }
 
 .navigation a:hover {
-  color: #1a1a1a;
+  color: #2fa75b;
+}
+
+.navigation .active {
+  color: #2fa75b;
+}
+
+.navigation .active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 2px;
+  background-color: #2fa75b;
+}
+
+.contactButton {
+  padding: 14px 24px;
+
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  background-color: #2fa75b;
+  border-radius: 999px;
+
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.contactButton:hover {
+  background-color: #258b4a;
+  transform: translateY(-2px);
 }
