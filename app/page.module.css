@@ -5,10 +5,9 @@
 }
 
 .hero {
-  min-height: calc(100vh - 86px);
   display: flex;
-  align-items: center;
-  padding: 64px 32px;
+  align-items: flex-start;
+  padding: 72px 32px 48px;
 }
 
 .heroContainer {
@@ -24,6 +23,7 @@
 
 .presentation {
   max-width: 560px;
+  padding-top: 32px;
 }
 
 .greeting {
@@ -129,12 +129,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 480px;
+  min-height: 450px;
 }
 
 .imageCircle {
-  width: 390px;
-  height: 390px;
+  width: 420px;
+  height: 420px;
 
   display: flex;
   align-items: center;
@@ -151,8 +151,8 @@
 
 .studentCard {
   position: absolute;
-  right: 10px;
-  bottom: 55px;
+  right: 0;
+  bottom: 30px;
 
   width: 235px;
   padding: 20px 22px;
@@ -177,6 +177,11 @@
 }
 
 @media (max-width: 900px) {
+  
+  .hero {
+    padding: 48px 24px;
+  }
+
   .heroContainer {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -185,6 +190,7 @@
   .presentation {
     max-width: 100%;
     text-align: center;
+    padding-top: 0;
   }
 
   .presentation h2,
