@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import About from "./components/About";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import styles from "./page.module.css";
@@ -76,6 +77,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <About />
         <Technologies />
         <Projects />
       </main>
