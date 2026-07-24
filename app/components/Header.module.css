@@ -1,5 +1,9 @@
 .header {
+  position: relative;
+  z-index: 10;
+
   width: 100%;
+
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
 }
@@ -26,6 +30,12 @@
 
 .logo span {
   color: #f47b32;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .navigation {
@@ -55,12 +65,14 @@
 
 .navigation .active::after {
   content: "";
+
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
 
   height: 2px;
+
   background-color: #2fa75b;
 }
 
@@ -71,6 +83,7 @@
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
 
   background-color: #2fa75b;
   border-radius: 999px;
@@ -83,4 +96,69 @@
 .contactButton:hover {
   background-color: #258b4a;
   transform: translateY(-2px);
+}
+
+.menuButton {
+  display: none;
+
+  color: #2fa75b;
+  font-size: 28px;
+  line-height: 1;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .container {
+    height: 72px;
+    padding: 0 24px;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+
+    padding: 18px 24px 24px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 12px 24px rgba(34, 34, 34, 0.1);
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .navigation a {
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .navigation .active::after {
+    display: none;
+  }
+
+  .contactButton {
+    text-align: center;
+  }
 }
