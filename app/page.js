@@ -1,3 +1,10 @@
+import {
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
 import Image from "next/image";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -43,30 +50,44 @@ export default function Home() {
               </div>
 
               <div className={styles.socialLinks}>
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
+                  <a
+                    href="https://github.com/ivankleyton"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    title="GitHub"
+                  >
+                    <FaGithub />
+                  </a>
 
-                <a
-                  href="https://linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
+                  <a
+                    href="https://linkedin.com/in/ivankleyon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <FaLinkedinIn />
+                  </a>
 
-                <a
-                  href="https://instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </a>
-              </div>
+                  <a
+                    href="https://www.instagram.com/ivankleyton/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    title="Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+
+                  <a
+                    href="mailto:ivankleyton12@gmail.com"
+                    aria-label="Enviar e-mail"
+                    title="Enviar e-mail"
+                  >
+                    <FaEnvelope />
+                  </a>
+                </div>
             </div>
 
             <div className={styles.imageArea}>

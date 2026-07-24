@@ -110,18 +110,39 @@
 
 .socialLinks {
   display: flex;
-  gap: 24px;
+  gap: 12px;
 }
 
 .socialLinks a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #656565;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 19px;
   text-decoration: none;
+
+  background-color: #ffffff;
+  border: 1px solid #e8e3de;
+  border-radius: 50%;
+
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
 }
 
 .socialLinks a:hover {
-  color: #2fa75b;
+  color: #ffffff;
+
+  background-color: #2fa75b;
+  border-color: #2fa75b;
+
+  transform: translateY(-3px);
 }
 
 .imageArea {
