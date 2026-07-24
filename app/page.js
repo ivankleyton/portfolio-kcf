@@ -78,6 +78,24 @@ export default function Home() {
                 <span>Ciência da Computação</span>
               </div>
             </div>
+          
+            <div className={styles.heroStats}>
+              <article className={styles.stat}>
+                <strong>01</strong>
+                <span>Projeto em desenvolvimento</span>
+              </article>
+
+            <article className={styles.stat}>
+                <strong>06+</strong>
+                <span>Tecnologias em estudo</span>
+              </article>
+          
+
+            <article className={styles.stat}>
+                <strong>2027</strong>
+                <span>Previsão de formação</span>
+              </article>
+              </div>
           </div>
         </section>
         

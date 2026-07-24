@@ -176,7 +176,47 @@
   font-size: 14px;
 }
 
+.heroStats {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 20px;
+  padding-top: 28px;
+
+  border-top: 1px solid #ebe5df;
+}
+
+.stat {
+  padding: 0 24px;
+  text-align: center;
+  border-right: 1px solid #ebe5df;
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #2fa75b;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.stat span {
+  color: #777777;
+  font-size: 13px;
+}
+
 @media (max-width: 900px) {
+
+  .heroStats {
+    margin-top: 0;
+  }
   
   .hero {
     padding: 48px 24px;
@@ -206,5 +246,22 @@
 
   .imageArea {
     min-height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroStats {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .stat {
+    padding: 20px 0;
+    border-right: none;
+    border-bottom: 1px solid #ebe5df;
+  }
+
+  .stat:last-child {
+    border-bottom: none;
   }
 }
