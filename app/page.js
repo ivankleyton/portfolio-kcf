@@ -91,19 +91,33 @@ export default function Home() {
             </div>
 
             <div className={styles.imageArea}>
+              <span className={styles.greenDot}></span>
+              <span className={styles.outlineCircle}></span>
+
+              <div className={styles.codeBadge} aria-hidden="true">
+                {"</>"}
+              </div>
+
               <div className={styles.imageCircle}>
                 <Image
                   src="/images/perfil.png"
                   alt="Foto de Ivan Campelo"
-                  width={420}
-                  height={420}
+                  fill
+                  sizes="(max-width: 600px) 300px, 420px"
                   className={styles.profileImage}
+                  priority
                 />
               </div>
 
               <div className={styles.studentCard}>
-                <strong>Estudante de</strong>
-                <span>Ciência da Computação</span>
+                <span className={styles.cardIcon} aria-hidden="true">
+                  ✓
+                </span>
+
+                <div>
+                  <strong>Estudante de</strong>
+                  <span>Ciência da Computação</span>
+                </div>
               </div>
             </div>
           
