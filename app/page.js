@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
+import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import styles from "./page.module.css";
 
@@ -80,6 +81,7 @@ export default function Home() {
         
         <About />
         <Technologies />
+        <Experiences />
         <Projects />
       </main>
     </div>
