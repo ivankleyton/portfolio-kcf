@@ -4,6 +4,7 @@ import Technologies from "./components/Technologies";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -86,6 +87,8 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
+      
+      <Footer />
     </div>
   );
 }
