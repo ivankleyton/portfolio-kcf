@@ -1,5 +1,5 @@
 .technologies {
-  padding: 64px 32px 80px;
+  padding: 80px 32px;
   background-color: #ffffff;
 }
 
@@ -10,60 +10,106 @@
 }
 
 .title {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   text-align: center;
+}
+
+.title > p {
+  margin-bottom: 8px;
+  color: #2fa75b;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .title h2 {
   margin-bottom: 12px;
   color: #151a23;
-  font-size: 26px;
+  font-size: 30px;
+  letter-spacing: -1px;
 }
 
-.title span {
+.title > span {
   width: 36px;
   height: 3px;
   display: block;
   margin: 0 auto;
+
   background-color: #2fa75b;
   border-radius: 999px;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
 .card {
-  padding: 24px;
+  min-height: 110px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   background-color: #fffdfb;
   border: 1px solid #eeeeee;
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(34, 34, 34, 0.06);
+
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .card:hover {
+  border-color: #cfe7d7;
+  box-shadow: 0 14px 30px rgba(34, 34, 34, 0.1);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(34, 34, 34, 0.1);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2fa75b;
+  font-size: 25px;
+
+  background-color: #eaf6ee;
+  border-radius: 12px;
+
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.card:hover .icon {
+  color: #ffffff;
+  background-color: #f47b32;
 }
 
 .card strong {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+
   color: #151a23;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .card p {
   color: #777777;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -71,10 +117,18 @@
 
 @media (max-width: 600px) {
   .technologies {
-    padding: 48px 24px 64px;
+    padding: 64px 24px;
+  }
+
+  .title h2 {
+    font-size: 27px;
   }
 
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
   }
 }

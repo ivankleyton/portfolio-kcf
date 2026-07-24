@@ -1,44 +1,86 @@
+import {
+  SiCss,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiNextdotjs,
+  SiPython,
+  SiReact,
+} from "react-icons/si";
+
 import styles from "./Technologies.module.css";
+
+const technologies = [
+  {
+    name: "JavaScript",
+    description: "Desenvolvimento web",
+    icon: SiJavascript,
+  },
+  {
+    name: "React",
+    description: "Interfaces de usuário",
+    icon: SiReact,
+  },
+  {
+    name: "Next.js",
+    description: "Aplicações React",
+    icon: SiNextdotjs,
+  },
+  {
+    name: "HTML",
+    description: "Estrutura das páginas",
+    icon: SiHtml5,
+  },
+  {
+    name: "CSS",
+    description: "Estilização e responsividade",
+    icon: SiCss,
+  },
+  {
+    name: "Python",
+    description: "Programação e estudos",
+    icon: SiPython,
+  },
+  {
+    name: "Git",
+    description: "Controle de versões",
+    icon: SiGit,
+  },
+  {
+    name: "GitHub",
+    description: "Repositórios e projetos",
+    icon: SiGithub,
+  },
+];
 
 export default function Technologies() {
   return (
     <section id="tecnologias" className={styles.technologies}>
       <div className={styles.container}>
         <div className={styles.title}>
+          <p>MINHAS FERRAMENTAS</p>
           <h2>Tecnologias que utilizo</h2>
           <span></span>
         </div>
 
         <div className={styles.cards}>
-          <article className={styles.card}>
-            <strong>JavaScript</strong>
-            <p>Desenvolvimento web</p>
-          </article>
+          {technologies.map((technology) => {
+            const Icon = technology.icon;
 
-          <article className={styles.card}>
-            <strong>React</strong>
-            <p>Interfaces de usuário</p>
-          </article>
+            return (
+              <article className={styles.card} key={technology.name}>
+                <div className={styles.icon}>
+                  <Icon />
+                </div>
 
-          <article className={styles.card}>
-            <strong>Next.js</strong>
-            <p>Aplicações React</p>
-          </article>
-
-          <article className={styles.card}>
-            <strong>HTML e CSS</strong>
-            <p>Estrutura e estilização</p>
-          </article>
-
-          <article className={styles.card}>
-            <strong>Python</strong>
-            <p>Programação e estudos</p>
-          </article>
-
-          <article className={styles.card}>
-            <strong>Git e GitHub</strong>
-            <p>Controle de versões</p>
-          </article>
+                <div>
+                  <strong>{technology.name}</strong>
+                  <p>{technology.description}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
