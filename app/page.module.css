@@ -136,17 +136,19 @@
   width: 420px;
   height: 420px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #718264;
-  font-size: 18px;
-  font-weight: 600;
+  overflow: hidden;
 
   background-color: #edf2e6;
   border: 24px solid #dce5cf;
   border-radius: 50%;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .studentCard {
@@ -264,4 +266,20 @@
   .stat:last-child {
     border-bottom: none;
   }
+
+  .imageArea {
+  min-height: 350px;
+}
+
+.imageCircle {
+  width: 300px;
+  height: 300px;
+  border-width: 18px;
+}
+
+.studentCard {
+  right: 0;
+  bottom: 10px;
+  width: 210px;
+}
 }

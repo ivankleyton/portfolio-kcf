@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "./components/Header";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
@@ -70,7 +71,13 @@ export default function Home() {
 
             <div className={styles.imageArea}>
               <div className={styles.imageCircle}>
-                <span>Sua foto</span>
+                <Image
+                  src="/images/perfil.png"
+                  alt="Foto de Ivan Campelo"
+                  width={420}
+                  height={420}
+                  className={styles.profileImage}
+                />
               </div>
 
               <div className={styles.studentCard}>
