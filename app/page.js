@@ -31,7 +31,7 @@ export default function Home() {
               </h1>
 
               <h2>
-                Desenvolvedor Front-end e estudante apaixonado por tecnologia.
+                Desenvolvedor Web com foco em Front-end e apaixonado por tecnologia.
               </h2>
 
               <p className={styles.description}>
