@@ -134,8 +134,8 @@ export default function Home() {
           
 
             <article className={styles.stat}>
-                <strong>2027</strong>
-                <span>Previsão de formação</span>
+                <strong>Front-end</strong>
+                <span>Foco atual de desenvolvimento</span>
               </article>
               </div>
           </div>
