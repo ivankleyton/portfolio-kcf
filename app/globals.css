@@ -3,6 +3,7 @@
 
   --background: #fffdfb;
   --surface: #ffffff;
+  --surface-soft: #fffaf6;
 
   --text-primary: #151a23;
   --text-secondary: #656565;
@@ -23,6 +24,7 @@ html[data-theme="dark"] {
 
   --background: #101512;
   --surface: #181e1a;
+  --surface-soft: #141a16;
 
   --text-primary: #f3f6f4;
   --text-secondary: #b5c0b9;

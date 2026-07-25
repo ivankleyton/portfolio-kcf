@@ -1,121 +1,132 @@
 .about {
-  padding: 88px 32px;
-  background-color: #fffaf6;
+    padding: 88px 32px;
+    background-color: var(--surface-soft);
+    transition: background-color 0.25s;
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
 }
 
 .text {
-  max-width: 560px;
+    max-width: 560px;
 }
 
 .subtitle {
-  margin-bottom: 12px;
-  color: #2fa75b;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #2fa75b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .text h2 {
-  margin-bottom: 24px;
-  color: #151a23;
-  font-size: 38px;
-  line-height: 1.2;
-  letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
 }
 
 .text > p:not(.subtitle) {
-  margin-bottom: 16px;
-  color: #666666;
-  font-size: 16px;
-  line-height: 1.7;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 .highlights {
-  display: grid;
-  gap: 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .highlightCard {
-  padding: 22px 24px;
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  column-gap: 16px;
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 16px;
 
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(34, 34, 34, 0.06);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(34, 34, 34, 0.06);
 
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transition:
+        background-color 0.25s,
+        border-color 0.25s,
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
 .highlightCard:hover {
-  transform: translateX(5px);
-  box-shadow: 0 12px 30px rgba(34, 34, 34, 0.1);
+    transform: translateX(5px);
+    box-shadow: 0 12px 30px rgba(34, 34, 34, 0.1);
 }
 
 .number {
-  grid-row: 1 / 3;
+    grid-row: 1 / 3;
 
-  color: #f47b32;
-  font-size: 24px;
-  font-weight: 700;
+    color: #f47b32;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .highlightCard h3 {
-  margin-bottom: 6px;
-  color: #151a23;
-  font-size: 18px;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+    font-size: 18px;
 }
 
 .highlightCard p {
-  color: #777777;
-  font-size: 14px;
-  line-height: 1.5;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+:global(html[data-theme="dark"]) .highlightCard {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+:global(html[data-theme="dark"]) .highlightCard:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.38);
 }
 
 @media (max-width: 900px) {
-  .content {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
+    .content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
 
-  .text {
-    max-width: 100%;
-    text-align: center;
-  }
+    .text {
+        max-width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {
-  .about {
-    padding: 64px 24px;
-  }
+    .about {
+        padding: 64px 24px;
+    }
 
-  .text h2 {
-    font-size: 30px;
-  }
+    .text h2 {
+        font-size: 30px;
+    }
 
-  .highlightCard {
-    grid-template-columns: 42px 1fr;
-    padding: 20px;
-  }
+    .highlightCard {
+        grid-template-columns: 42px 1fr;
+        padding: 20px;
+    }
 
-  .number {
-    font-size: 20px;
-  }
+    .number {
+        font-size: 20px;
+    }
 }
