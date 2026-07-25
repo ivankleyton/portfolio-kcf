@@ -55,7 +55,10 @@
 }
 
 .projectImage {
+  position: relative;
   min-height: 240px;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,12 +67,22 @@
   font-size: 28px;
   font-weight: 700;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(47, 167, 91, 0.95),
-      rgba(21, 90, 51, 0.95)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(47, 167, 91, 0.95),
+    rgba(21, 90, 51, 0.95)
+  );
+}
+
+.projectScreenshot {
+  object-fit: cover;
+  object-position: top;
+
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .projectScreenshot {
+  transform: scale(1.03);
 }
 
 .movieProject {

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Projects.module.css";
 
 export default function Projects() {
@@ -14,7 +15,13 @@ export default function Projects() {
         <div className={styles.projectGrid}>
           <article className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <span>Portfólio KCF</span>
+              <Image
+                src="/images/projects/portfolio.png"
+                alt="Captura da página inicial do Portfólio KCF"
+                fill
+                sizes="(max-width: 800px) 100vw, 50vw"
+                className={styles.projectScreenshot}
+              />
             </div>
 
             <div className={styles.projectContent}>
