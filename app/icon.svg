@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#173c2a"></rect>
+
+  <text x="7" y="40" fill="#2fa75b" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="-1">
+    KCF
+  </text>
+
+  <circle cx="56" cy="42" r="3.5" fill="#f47b32"></circle>
+</svg>
