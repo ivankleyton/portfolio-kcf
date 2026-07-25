@@ -34,6 +34,10 @@ Além de apresentar minhas informações profissionais, o portfólio também rep
 - GitHub
 - React Icons
 
+## Projeto publicado
+
+Acesse o portfólio: https://portfolio-kcf.vercel.app/
+
 ## Como executar o projeto
 
 Primeiro, clone o repositório:
