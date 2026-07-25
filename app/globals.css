@@ -16,6 +16,9 @@
   --image-background: #edf2e6;
   --image-border: #dce5cf;
 
+  --icon-background: #eaf6ee;
+  --card-hover-border: #cfe7d7;
+
   --secondary-button-hover: #fff3eb;
 }
 
@@ -36,6 +39,9 @@ html[data-theme="dark"] {
 
   --image-background: #202a23;
   --image-border: #34483a;
+
+  --icon-background: #203126;
+  --card-hover-border: #3e614a;
 
   --secondary-button-hover: #38271f;
 }
