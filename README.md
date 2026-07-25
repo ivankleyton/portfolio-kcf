@@ -36,7 +36,7 @@ Além de apresentar minhas informações profissionais, o portfólio também rep
 
 ## Projeto publicado
 
-Acesse o portfólio: https://portfolio-kcf.vercel.app/
+Acesse o portfólio: https://ivankleyton.vercel.app/
 
 ## Como executar o projeto
 
