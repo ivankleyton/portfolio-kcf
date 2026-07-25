@@ -39,34 +39,65 @@ Além de apresentar minhas informações profissionais, o portfólio também rep
 Primeiro, clone o repositório:
 
 ```bash
-git clone https://github.com/ivankleyton/portfolio-kcf
+git clone https://github.com/ivankleyton/portfolio-kcf.git
+```
 
 Entre na pasta:
 
-- cd portfolio-kcf
+```bash
+cd portfolio-kcf
+```
 
 Instale as dependências:
 
-- npm install
+```bash
+npm install
+```
 
 Execute o servidor de desenvolvimento:
 
-- npm run dev
+```bash
+npm run dev
+```
 
 Depois, abra no navegador:
 
-- http://localhost:3000
+```text
+http://localhost:3000
+```
 
-Verificações
+## Verificações
 
 Para executar o ESLint:
 
-- npm run lint
+```bash
+npm run lint
+```
 
 Para gerar a versão de produção:
 
-- npm run build
+```bash
+npm run build
+```
 
 Para executar a versão de produção localmente:
 
-- npm run start
+```bash
+npm run start
+```
+
+## Status
+
+Primeira versão concluída e pronta para publicação.
+
+## Autor
+
+**Ivan Campelo**
+
+- GitHub: https://github.com/ivankleyton
+- LinkedIn: https://www.linkedin.com/in/ivankleyon/
+- E-mail: ivankleyton12@gmail.com
+
+## Licença
+
+Este projeto foi desenvolvido para fins de estudo e apresentação profissional.

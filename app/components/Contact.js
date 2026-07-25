@@ -33,7 +33,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/ivankleyon"
+            href="https://www.linkedin.com/in/ivankleyton"
             target="_blank"
             rel="noopener noreferrer"
           >
