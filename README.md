@@ -92,7 +92,7 @@ npm run start
 
 ## Status
 
-Primeira versão concluída e pronta para publicação.
+Primeira versão concluída e publicada.
 
 ## Autor
 
