@@ -115,8 +115,8 @@ export default function Home() {
                 </span>
 
                 <div>
-                  <strong>Estudante de</strong>
-                  <span>Ciência da Computação</span>
+                  <strong>Desenvolvedor Web</strong>
+                  <span>Foco em Front-end</span>
                 </div>
               </div>
             </div>

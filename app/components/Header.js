@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -8,6 +8,26 @@ export default function Header() {
 
   function closeMenu() {
     setMenuOpen(false);
+  }
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    const initialTheme =
+      savedTheme || (prefersDarkMode ? "dark" : "light");
+
+    document.documentElement.dataset.theme = initialTheme;
+  }, []);
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.dataset.theme;
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    document.documentElement.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
   }
 
   return (
@@ -65,6 +85,24 @@ export default function Header() {
               Contato
             </a>
           </nav>
+
+          <button
+            className={styles.themeButton}
+            type="button"
+            aria-label="Alternar entre modo claro e escuro"
+            onClick={toggleTheme}
+          >
+            <span className={styles.moonIcon} aria-hidden="true">
+              ☾
+            </span>
+
+            <span className={styles.sunIcon} aria-hidden="true">
+              ☀
+            </span>
+
+            <span className={styles.darkLabel}>Modo escuro</span>
+            <span className={styles.lightLabel}>Modo claro</span>
+          </button>
 
           <a
             className={styles.contactButton}

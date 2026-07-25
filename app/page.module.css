@@ -1,7 +1,12 @@
 .page {
   min-height: 100vh;
-  background-color: #fffdfb;
-  color: #151a23;
+
+  color: var(--text-primary);
+  background-color: var(--background);
+
+  transition:
+    color 0.25s,
+    background-color 0.25s;
 }
 
 .hero {
@@ -38,7 +43,7 @@
 .presentation h1 {
   margin-bottom: 14px;
 
-  color: #151a23;
+  color: var(--text-primary);
   font-size: 64px;
   line-height: 1;
   letter-spacing: -3px;
@@ -52,7 +57,7 @@
   max-width: 520px;
   margin-bottom: 18px;
 
-  color: #806a60;
+  color: var(--text-heading-secondary);
   font-size: 24px;
   line-height: 1.35;
 }
@@ -61,7 +66,7 @@
   max-width: 540px;
   margin-bottom: 30px;
 
-  color: #656565;
+  color: var(--text-secondary);
   font-size: 17px;
   line-height: 1.7;
 }
@@ -93,7 +98,7 @@
 }
 
 .primaryButton:hover {
-  background-color: #258b4a;
+  background-color: var(--secondary-button-hover);
   transform: translateY(-2px);
 }
 
@@ -121,12 +126,12 @@
   align-items: center;
   justify-content: center;
 
-  color: #656565;
+  color: var(--text-secondary);
   font-size: 19px;
   text-decoration: none;
 
-  background-color: #ffffff;
-  border: 1px solid #e8e3de;
+  background-color: var(--surface);
+  border: 1px solid var(--border-soft);
   border-radius: 50%;
 
   transition:
@@ -159,8 +164,8 @@
   height: 420px;
   flex-shrink: 0;
   overflow: hidden;
-  background-color: #edf2e6;
-  border: 24px solid #dce5cf;
+  background-color: var(--image-background);
+  border: 24px solid var(--image-border);
   border-radius: 50%;
 }
 
@@ -171,24 +176,28 @@
 
 
 .studentCard {
-  position: absolute;
-  right: 15px;
-  bottom: 45px;
-  z-index: 4;
+    position: absolute;
+    right: 15px;
+    bottom: 45px;
+    z-index: 4;
 
-  width: 265px;
-  padding: 18px 20px;
+    width: 265px;
+    padding: 18px 20px;
 
-  display: flex;
-  align-items: center;
-  gap: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-radius: 14px;
-  box-shadow: 0 16px 40px rgba(34, 34, 34, 0.18);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(34, 34, 34, 0.18);
 
-  animation: floatingCard 4s ease-in-out infinite;
+    animation: floatingCard 4s ease-in-out infinite;
+
+    transition:
+      background-color 0.25s,
+      border-color 0.25s;
 }
 
 .studentCard div {
@@ -201,15 +210,13 @@
 
 .studentCard strong {
   display: block;
-
-  color: #151a23;
+  color: var(--text-primary);
   font-size: 15px;
 }
 
 .studentCard div span {
   display: block;
-
-  color: #777777;
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.4;
 }
@@ -240,13 +247,13 @@
   margin-top: 20px;
   padding-top: 28px;
 
-  border-top: 1px solid #ebe5df;
+  border-top: 1px solid var(--divider);
 }
 
 .stat {
   padding: 0 24px;
   text-align: center;
-  border-right: 1px solid #ebe5df;
+  border-right: 1px solid var(--divider);
 }
 
 .stat:last-child {
@@ -263,7 +270,7 @@
 }
 
 .stat span {
-  color: #777777;
+  color: var(--text-secondary);
   font-size: 13px;
 }
 
@@ -311,7 +318,7 @@
   font-weight: 700;
 
   background-color: #f47b32;
-  border: 6px solid #fffdfb;
+  border: 6px solid var(--background);
   border-radius: 50%;
   box-shadow: 0 10px 24px rgba(244, 123, 50, 0.25);
 
@@ -327,6 +334,10 @@
   50% {
     transform: translateY(-8px);
   }
+}
+
+:global(html[data-theme="dark"]) .studentCard {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 900px) {
@@ -488,7 +499,7 @@
   .stat {
     padding: 20px 0;
     border-right: none;
-    border-bottom: 1px solid #ebe5df;
+    border-bottom: 1px solid var(--divider);
   }
 
   .stat:last-child {

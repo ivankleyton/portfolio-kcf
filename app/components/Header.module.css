@@ -4,8 +4,12 @@
 
   width: 100%;
 
-  background-color: #ffffff;
-  border-bottom: 1px solid #eeeeee;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
 }
 
 .container {
@@ -48,7 +52,7 @@
   position: relative;
   padding: 32px 0;
 
-  color: #171717;
+  color: var(--text-primary);
   font-size: 15px;
   text-decoration: none;
 
@@ -110,6 +114,48 @@
   cursor: pointer;
 }
 
+.themeButton {
+  padding: 8px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--text-primary);
+  font-size: 14px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+.themeButton:hover {
+  color: #2fa75b;
+}
+
+.moonIcon,
+.sunIcon {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.sunIcon,
+.lightLabel {
+  display: none;
+}
+
+:global(html[data-theme="dark"]) .moonIcon,
+:global(html[data-theme="dark"]) .darkLabel {
+  display: none;
+}
+
+:global(html[data-theme="dark"]) .sunIcon,
+:global(html[data-theme="dark"]) .lightLabel {
+  display: inline;
+}
+
 @media (max-width: 1050px) {
   .container {
     height: 72px;
@@ -133,8 +179,8 @@
 
     padding: 18px 24px 24px;
 
-    background-color: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
     box-shadow: 0 12px 24px rgba(34, 34, 34, 0.1);
   }
 
@@ -150,8 +196,7 @@
 
   .navigation a {
     padding: 13px 0;
-
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--border);
   }
 
   .navigation .active::after {
@@ -160,5 +205,15 @@
 
   .contactButton {
     text-align: center;
+  }
+
+  .themeButton {
+    width: 100%;
+    padding: 12px;
+    
+    justify-content: center;
+    
+    border: 1px solid var(--border);
+    border-radius: 999px;
   }
 }
