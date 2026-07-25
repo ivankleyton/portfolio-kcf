@@ -1,6 +1,8 @@
 .projects {
   padding: 80px 32px;
-  background-color: #fffaf6;
+  background-color: var(--surface-soft);
+  
+  transition: background-color 0.25s;
 }
 
 .container {
@@ -22,7 +24,7 @@
 }
 
 .heading h2 {
-  color: #151a23;
+  color: var(--text-primary);
   font-size: 32px;
   letter-spacing: -1px;
 }
@@ -35,11 +37,14 @@
 
 .projectCard {
   overflow: hidden;
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(34, 34, 34, 0.07);
+  
   transition:
+    background-color 0.25s,
+    border-color 0.25s,
     transform 0.2s,
     box-shadow 0.2s;
 }
@@ -89,7 +94,7 @@
 }
 
 .projectHeader h3 {
-  color: #151a23;
+  color: var(--text-primary);
   font-size: 21px;
 }
 
@@ -105,20 +110,20 @@
 }
 
 .status {
-  color: #237c43;
-  background-color: #e8f6ed;
+  color: var(--status-green-text);
+  background-color: var(--status-green-background);
 }
 
 .plannedStatus {
-  color: #b7561f;
-  background-color: #fff0e7;
+  color: var(--status-orange-text);
+  background-color: var(--status-orange-background);
 }
 
 .projectContent > p {
   min-height: 72px;
   margin-bottom: 20px;
 
-  color: #666666;
+  color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.6;
 }
@@ -133,10 +138,10 @@
 .technologies span {
   padding: 6px 10px;
 
-  color: #666666;
+  color: var(--text-secondary);
   font-size: 12px;
 
-  background-color: #f4f4f4;
+  background-color: var(--tag-background);
   border-radius: 999px;
 }
 
@@ -152,9 +157,17 @@
 }
 
 .comingSoon {
-  color: #999999;
+  color: var(--text-secondary);
   font-size: 14px;
   font-weight: 600;
+}
+
+:global(html[data-theme="dark"]) .projectCard {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+:global(html[data-theme="dark"]) .projectCard:hover {
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.42);
 }
 
 @media (max-width: 800px) {

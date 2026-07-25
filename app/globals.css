@@ -19,6 +19,14 @@
   --icon-background: #eaf6ee;
   --card-hover-border: #cfe7d7;
 
+  --tag-background: #f4f4f4;
+
+  --status-green-background: #e8f6ed;
+  --status-green-text: #237c43;
+
+  --status-orange-background: #fff0e7;
+  --status-orange-text: #b7561f;
+
   --secondary-button-hover: #fff3eb;
 }
 
@@ -42,6 +50,14 @@ html[data-theme="dark"] {
 
   --icon-background: #203126;
   --card-hover-border: #3e614a;
+
+  --tag-background: #252e28;
+
+  --status-green-background: #203a29;
+  --status-green-text: #72d493;
+  
+  --status-orange-background: #432b1f;
+  --status-orange-text: #f5a16c;
 
   --secondary-button-hover: #38271f;
 }
