@@ -95,7 +95,7 @@ Primeira versão concluída e pronta para publicação.
 **Ivan Campelo**
 
 - GitHub: https://github.com/ivankleyton
-- LinkedIn: https://www.linkedin.com/in/ivankleyon/
+- LinkedIn: https://www.linkedin.com/in/ivankleyton/
 - E-mail: ivankleyton12@gmail.com
 
 ## Licença
