@@ -27,6 +27,18 @@
   --status-orange-background: #fff0e7;
   --status-orange-text: #b7561f;
 
+  --contact-background: #173c2a;
+  --footer-background: #102c1f;
+
+  --inverse-text: #ffffff;
+  --inverse-muted: #d4e0d8;
+  --inverse-soft: #a9bdb0;
+
+  --inverse-card-background: rgba(255, 255, 255, 0.08);
+  --inverse-card-hover: rgba(255, 255, 255, 0.13);
+  --inverse-border: rgba(255, 255, 255, 0.14);
+  --inverse-divider: rgba(255, 255, 255, 0.12);
+
   --secondary-button-hover: #fff3eb;
 }
 
@@ -55,9 +67,21 @@ html[data-theme="dark"] {
 
   --status-green-background: #203a29;
   --status-green-text: #72d493;
-  
+
   --status-orange-background: #432b1f;
   --status-orange-text: #f5a16c;
+
+  --contact-background: #0d2117;
+  --footer-background: #091810;
+  
+  --inverse-text: #f3f6f4;
+  --inverse-muted: #b7c8bd;
+  --inverse-soft: #91a69a;
+  
+  --inverse-card-background: rgba(255, 255, 255, 0.06);
+  --inverse-card-hover: rgba(255, 255, 255, 0.1);
+  --inverse-border: rgba(255, 255, 255, 0.1);
+  --inverse-divider: rgba(255, 255, 255, 0.09);
 
   --secondary-button-hover: #38271f;
 }

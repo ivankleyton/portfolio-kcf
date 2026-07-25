@@ -1,6 +1,8 @@
 .contact {
   padding: 88px 32px;
-  background-color: #173c2a;
+  background-color: var(--contact-background);
+  
+  transition: background-color 0.25s;
 }
 
 .container {
@@ -30,7 +32,7 @@
 .content h2 {
   margin-bottom: 18px;
 
-  color: #ffffff;
+  color: var(--inverse-text);
   font-size: 42px;
   line-height: 1.2;
   letter-spacing: -1.5px;
@@ -39,7 +41,7 @@
 .description {
   margin-bottom: 28px;
 
-  color: #d4e0d8;
+  color: var(--inverse-muted);
   font-size: 16px;
   line-height: 1.7;
 }
@@ -80,28 +82,28 @@
   gap: 7px;
 
   text-decoration: none;
-
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: var(--inverse-card-background);
+  border: 1px solid var(--inverse-border);
   border-radius: 14px;
 
   transition:
     background-color 0.2s,
+    border-color 0.25s,
     transform 0.2s;
 }
 
 .links a:hover {
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: var(--inverse-card-hover);
   transform: translateX(5px);
 }
 
 .links span {
-  color: #a9bdb0;
+  color: var(--inverse-soft);
   font-size: 13px;
 }
 
 .links strong {
-  color: #ffffff;
+  color: var(--inverse-text);
   font-size: 16px;
 }
 
